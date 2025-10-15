@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 12</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    table{border-collapse:collapse;width:240px}
+    td{border:1px solid #333;padding:20px;text-align:center;background:#f2f2f2}
+    .marcada{background:#cde6ff}
+  </style>
+</head>
+<body>
+
+  <table id="tabla">
+    <tr><td>A</td><td>B</td></tr>
+    <tr><td>C</td><td>D</td></tr>
+  </table>
+
+  <script>
+    $(function(){
+      $("#tabla td").on("mouseover",function(){$(this).addClass("marcada")});
+    });
+  </script>
+
+</body>
+</html>
