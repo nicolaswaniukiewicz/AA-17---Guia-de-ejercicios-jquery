@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 24</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    a{display:block;margin:6px 0}
+    .resaltado{background:yellow}
+  </style>
+</head>
+<body>
+
+  <h3>Links</h3>
+  <a href="https://www.google.com">google.com</a>
+  <a href="https://www.google.com.ar">google.com.ar</a>
+  <a href="https://www.buenosaires.gob.ar">buenosaires.gob.ar</a>
+  <a href="https://www.wikipedia.org">wikipedia.org</a>
+  <a href="https://www.afip.gob.ar">afip.gob.ar</a>
+
+  <script>
+    $(function(){
+      $("a").each(function(){
+        const u = $(this).attr("href") || "";
+        if (u.indexOf(".ar") !== -1) $(this).addClass("resaltado");
+      });
+    });
+  </script>
+
+</body>
+</html>
