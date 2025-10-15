@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 7</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    table{border-collapse:collapse;margin:10px}
+    td{border:1px solid #333;padding:8px;text-align:center;width:30px}
+    button{margin-top:10px}
+  </style>
+</head>
+<body>
+
+  <table id="tabla1">
+    <tr><td>A</td><td>B</td><td>C</td></tr>
+    <tr><td>D</td><td>E</td><td>F</td></tr>
+    <tr><td>G</td><td>H</td><td>I</td></tr>
+  </table>
+
+  <table id="tabla2">
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+    <tr><td>4</td><td>5</td><td>6</td></tr>
+    <tr><td>7</td><td>8</td><td>9</td></tr>
+  </table>
+
+  <button id="cambiar">Cambiar contenido</button>
+
+  <script>
+    $(function(){
+      $("#cambiar").on("click",function(){
+        $("#tabla1 td").text("-");
+      });
+    });
+  </script>
+
+</body>
+</html>
