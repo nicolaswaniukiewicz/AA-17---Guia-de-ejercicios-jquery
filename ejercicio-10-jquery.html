@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 10</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h1>Ejemplo con html()</h1>
+  <p>Este es el cuerpo de la página.</p>
+
+  <button id="ver-head">Ver contenido del head</button>
+  <button id="ver-body">Ver contenido del body</button>
+
+  <script>
+    $(function(){
+      $("#ver-head").on("click",function(){
+        alert($("head").html());
+      });
+      $("#ver-body").on("click",function(){
+        alert($("body").html());
+      });
+    });
+  </script>
+
+</body>
+</html>
