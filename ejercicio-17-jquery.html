@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 17</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    input[type="text"]{color:#06c;margin:6px 0;padding:6px}
+    .rojo{color:#c00}
+  </style>
+</head>
+<body>
+
+  <input type="text" value="Texto 1">
+  <br>
+  <input type="text" value="Texto 2">
+
+  <script>
+    $(function(){
+      $('input[type="text"]').on('focus',function(){$(this).addClass('rojo')});
+      $('input[type="text"]').on('blur',function(){$(this).removeClass('rojo')});
+    });
+  </script>
+
+</body>
+</html>
