@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 4</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    li { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h3>Hacé clic para ocultar el ítem</h3>
+  <ul id="lista">
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+  </ul>
+
+  <script>
+    $(function () {
+      $("#lista li").on("click", function () {
+        $(this).hide();
+      });
+    });
+  </script>
+
+</body>
+</html>
