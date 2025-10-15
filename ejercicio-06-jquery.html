@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 6</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .noticia{margin-bottom:12px}
+    .descripcion{font-size:16px}
+    button{margin-right:6px}
+  </style>
+</head>
+<body>
+
+  <div class="noticia">
+    <h3>Título 1</h3>
+    <div class="descripcion">Descripción de la noticia 1.</div>
+  </div>
+
+  <div class="noticia">
+    <h3>Título 2</h3>
+    <div class="descripcion">Descripción de la noticia 2.</div>
+  </div>
+
+  <div class="noticia">
+    <h3>Título 3</h3>
+    <div class="descripcion">Descripción de la noticia 3.</div>
+  </div>
+
+  <button id="btn-chico">Chico</button>
+  <button id="btn-medio">Medio</button>
+  <button id="btn-grande">Grande</button>
+
+  <script>
+    $(function(){
+      $("#btn-chico").on("click",function(){$(".descripcion").css("font-size","14px")});
+      $("#btn-medio").on("click",function(){$(".descripcion").css("font-size","16px")});
+      $("#btn-grande").on("click",function(){$(".descripcion").css("font-size","20px")});
+    });
+  </script>
+
+</body>
+</html>
