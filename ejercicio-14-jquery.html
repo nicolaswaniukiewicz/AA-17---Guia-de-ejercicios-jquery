@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 14</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #caja{
+      width:200px;
+      height:200px;
+      background:#cde6ff;
+      border:1px solid #333;
+      margin-bottom:10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="caja"></div>
+  <p id="info">Mueve el mouse dentro del cuadro.</p>
+
+  <script>
+    $(function(){
+      $("#caja").on("mousemove",function(e){
+        $("#info").text("Coordenadas: X=" + e.offsetX + " Y=" + e.offsetY);
+      });
+      $("#caja").on("mouseleave",function(){
+        $("#info").text("El mouse no está dentro del div.");
+      });
+    });
+  </script>
+
+</body>
+</html>
