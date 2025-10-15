@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 15</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .pressable{padding:10px 16px;margin-right:8px}
+    .down{background:#cde6ff}
+  </style>
+</head>
+<body>
+
+  <button class="pressable">Botón 1</button>
+  <button class="pressable">Botón 2</button>
+
+  <script>
+    $(function(){
+      $(".pressable").on("mousedown",function(){$(this).addClass("down")});
+      $(".pressable").on("mouseup mouseleave",function(){$(this).removeClass("down")});
+    });
+  </script>
+
+</body>
+</html>
