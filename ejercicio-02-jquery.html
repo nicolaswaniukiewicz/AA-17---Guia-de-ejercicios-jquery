@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 2</title>
+  <!-- Incluimos jQuery desde CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <p id="parrafo1">Este es el primer párrafo (haz clic aquí).</p>
+  <p id="parrafo2">Este es el segundo párrafo (no hace nada al hacer clic).</p>
+
+  <script>
+    // Espera que el documento esté listo
+    $(document).ready(function(){
+      // Captura el click solo del primer párrafo
+      $("#parrafo1").click(function(){
+        alert("Hiciste clic en el primer párrafo.");
+      });
+    });
+  </script>
+
+</body>
+</html>
