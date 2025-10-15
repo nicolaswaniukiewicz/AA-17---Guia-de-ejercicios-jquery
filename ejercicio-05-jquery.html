@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 5</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    table { border-collapse: collapse; margin: 10px; width: 260px; }
+    td { border: 1px solid #333; padding: 8px; text-align: center; }
+    #tabla1 td { background: #f2f2f2; }
+    #tabla1 tr.activo td { background: #cde6ff; }
+    #tabla1 tr { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h3>Tabla 1 (cambia el color de la fila al presionar)</h3>
+  <table id="tabla1">
+    <tr><td>Fila 1</td></tr>
+    <tr><td>Fila 2</td></tr>
+    <tr><td>Fila 3</td></tr>
+  </table>
+
+  <h3>Tabla 2 (no hace nada)</h3>
+  <table id="tabla2">
+    <tr><td>Fila A</td></tr>
+    <tr><td>Fila B</td></tr>
+    <tr><td>Fila C</td></tr>
+  </table>
+
+  <script>
+    $(function () {
+      const $t1 = $("#tabla1");
+
+      $t1.on("mousedown", "tr", function () {
+        $(this).addClass("activo");     
+      });
+
+      $t1.on("mouseup mouseleave", "tr", function () {
+        $(this).removeClass("activo");  
+      });
+    });
+  </script>
+
+</body>
+</html>
