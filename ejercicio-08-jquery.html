@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 8</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    button{margin:6px 6px 0 0}
+  </style>
+</head>
+<body>
+
+  <p><a id="enlace" href="">(sin destino)</a></p>
+
+  <button class="set" data-url="https://www.google.com" data-text="Ir a Google">Google</button>
+  <button class="set" data-url="https://www.wikipedia.org" data-text="Ir a Wikipedia">Wikipedia</button>
+  <button class="set" data-url="https://www.youtube.com" data-text="Ir a YouTube">YouTube</button>
+  <button id="quitar">Quitar vínculo</button>
+
+  <script>
+    $(function(){
+      $(".set").on("click",function(){
+        const u=$(this).data("url");
+        const t=$(this).data("text");
+        $("#enlace").attr("href",u).text(t);
+      });
+      $("#quitar").on("click",function(){
+        $("#enlace").removeAttr("href").text("(sin destino)");
+      });
+    });
+  </script>
+
+</body>
+</html>
