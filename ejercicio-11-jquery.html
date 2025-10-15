@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio jQuery 11</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    strong{cursor:pointer;color:#c00}
+  </style>
+</head>
+<body>
+
+  <p>
+    Hoy es un <strong>hermoso</strong> día para aprender <strong>jQuery</strong> y practicar con <strong>ejercicios</strong> simples.
+  </p>
+
+  <script>
+    $(function(){
+      $("strong").on("click",function(){
+        $(this).hide();
+      });
+    });
+  </script>
+
+</body>
+</html>
